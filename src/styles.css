@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+p{
+    color: darkblue
+}
+
+body{
+    background-color: #add8e6;
+}
+
+.product-image{
+    max-height: 200px;
+}
+
+#image{
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    width: 400px;
+}
+
+#cinepolis {
+    background-image: url('./assets/cinepolis.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    background-position: center center;
+}

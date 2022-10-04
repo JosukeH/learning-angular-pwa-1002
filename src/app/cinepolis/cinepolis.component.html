@@ -1,0 +1,46 @@
+<div class="container mt-3">
+
+    <div class="row"  >
+      
+        <div class="col-6 border  p-4 border-4">
+                <label class="text-primary"  for="nombre">Nombre cliente</label>
+                <input type="text" [(ngModel)]="nombreCompleto" name="Nombre" required class="form-control" placeholder="nombre" id="nombre">
+                
+                <label class="text-primary" for="nombre">Cantidad de compradores</label>
+                <input type="text" name="Nombre"  [(ngModel)]="cantidadCompradores" required class="form-control" placeholder="1" id="nombre">
+
+                <label class="text-primary">Tarjeta cineco</label>
+                <br>
+                <label for="html">Si</label>
+                <input type="radio" [value]="0"  [(ngModel)]="isCineco" name="cineco" id="">
+                <span class="mx-2"></span>
+                <label for="html">No</label>
+                <input type="radio"   [(ngModel)]="isCineco" [value]="1" name="cineco" id="">
+                <br>
+                <label class="text-primary">Boletos</label>
+                <input type="number" [(ngModel)]="cantidadDeboletos" class="form-control" required placeholder="numero de boletos">
+                <button (click)="calcularPrecio()"  class="btn btn-primary mt-3"> Enviar </button>
+
+        </div>
+
+        <div class="mr-4 pt-5  col-5 border border-4">
+            <h2 class="text-primary text-center">Vista previa</h2>
+            <h3 class="text-center">Nombre: {{nombreCompleto}} </h3>
+            <h3 class="text-center">Cantidad de compradores: {{cantidadCompradores}}</h3>
+            <h3 class="text-center">Boletos disponibles: {{boletosDisponibles}}</h3>
+            <h3 class="text-center">es Miembro: {{(isCineco===0 ) ? 'Sí' : 'No'}}</h3>
+            <h3 class="text-center">Total: {{total}}</h3>
+             
+        </div>
+
+        <div class="mr-4  col-6 m-auto mt-3 text-center">
+    
+            <button class="btn btn-primary block pxs-4" >Vender </button>
+            <a class="btn btn-danger mx-3 block px-4">Salir </a>
+        </div>
+        <div class="col-6 w-100 mt-3" >
+            <img src="../../assets/cinepolis.jpeg" class="" id="image" alt="">
+          </div>
+    </div>
+
+</div>
